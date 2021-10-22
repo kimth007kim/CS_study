@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] numbers) {
+        
+        int answer = 0;
+        
+        System.out.println(Arrays.toString(numbers));
+        int slot[] = new int[10];
+        for (int i = 0; i<numbers.length; i++){
+            slot[numbers[i]]=1;
+            // System.out.println(numbers[i]);
+        }
+        for(int i = 0; i <10; i++){
+            if (slot[i]==0){
+                answer+=i;
+            }
+        }
+        System.out.println(Arrays.toString(slot));
+        return answer;
+    }
+}
+
+=========================================================================
+접근방법
+
+ 초기값(0)이 들어가있는 배열길이가 10인 slot 배열을 만들고
+numbers배열을 돌면서 있으면 숫자를 1을 올린다. 
+다시 slot배열을 돌면서 0인값의 인덱스를 total에 더해주는 방식으로 풀었다.
+
+다른방법?
+
+45에서 들어온값을 빼버리는 방식은 효율적으로 보였다.
+
+ 
