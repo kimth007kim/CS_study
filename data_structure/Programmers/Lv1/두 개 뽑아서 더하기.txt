@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+class Solution {
+    public int[] solution(int[] numbers) {
+        ArrayList<Integer> tmp = new ArrayList<Integer>();
+        
+        for(int i=0; i<numbers.length-1;i++){
+            for (int j=i+1; j<numbers.length;j++){
+                int total=numbers[i]+numbers[j];
+                if (tmp.contains(total) ==false){
+                    tmp.add(total);
+                      System.out.println(i+" "+j+" "+total);
+              
+                }
+            }
+        }
+        
+    int[] answer = new int[tmp.size()];    
+    for(int i=0;i<tmp.size();i++){
+        // System.out.println(tmp[i]);
+        answer[i]=tmp.get(i);
+    }
+    
+    Arrays.sort(answer);
+        return answer;
+    }
+}
