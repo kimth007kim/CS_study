@@ -1,0 +1,14 @@
+class Solution {
+    public String solution(String s) {
+        String answer;
+        int middle =s.length()/2;
+        if (s.length() %2 ==0){
+            answer = s.substring(middle-1, middle+1);                
+            System.out.println(answer);
+        }else{
+            answer =s.substring(middle,middle+1);
+        }
+        // System.out.println(s.length());
+        return answer;
+    }       
+}
