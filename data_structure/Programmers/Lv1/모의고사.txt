@@ -1,0 +1,59 @@
+import java.util.Arrays;
+
+class Solution {
+    
+    public int[] People(int len, int[] list){
+        int[] result = new int[len];
+        int cnt=0;
+        for(int i=0; i<result.length; i++){
+            result[i]=list[cnt];
+            cnt+=1;
+            if (cnt==list.length){
+                cnt=0;
+            }
+        }
+        return result;
+    
+    }
+    public int[] solution(int[] answers) {
+        int[][] cases= {{1,2,3,4,5},{2,1,2,3,2,4,2,5},{3,3,1,1,2,2,4,4,5,5}};
+        int len= answers.length;
+        
+        int[][] total = new int[3][];
+        
+        for (int i=0;i<3; i++){
+            total[i]=People(len,cases[i]);
+        }
+        
+        int[] score= {0,0,0};
+        int MAXIMUM=-1;
+        int maxCnt=0;
+        
+        for(int i =0 ; i<3; i++){
+            int count=0;
+            for(int j=0; j<len; j++){
+                if (total[i][j]== answers[j]){
+                    count+=1;
+                    
+                }
+            }
+            score[i]=count;
+            if( MAXIMUM==count){
+                maxCnt+=1;
+            }else if( MAXIMUM<count){
+                MAXIMUM=count;
+                maxCnt=1;
+            }
+        }
+        int[] answer = new int[maxCnt];
+        int seq =0;
+        for (int i=0;i<3;i++){
+            if (score[i]==MAXIMUM){
+                answer[seq]=i+1;
+                seq+=1;
+            }
+        }
+        
+        return answer;
+    }
+}
