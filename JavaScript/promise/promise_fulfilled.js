@@ -5,6 +5,6 @@ function getData() {
   });
 }
 
-getData().then(function (resolvedDate) {
+getData().then(function (resolvedData) {
   console.log(resolvedData);
 });
