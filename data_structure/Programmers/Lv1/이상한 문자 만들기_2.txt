@@ -1,0 +1,42 @@
+import java.util.Arrays;
+import java.util.regex.Pattern;
+
+class Solution {
+    public boolean isAlpha(char str){
+        String word = Character.toString(str);
+        return Pattern.matches("[a-zA-Z]+",word);
+    }
+
+    public String solution(String s) {
+        // s= s.replaceAll(" ","");
+        String answer = "";
+        int cnt =0 ;
+        char arr[]= s.toCharArray();
+        System.out.println(Arrays.toString(arr));
+        for (int i= 0; i<s.length(); i++){
+            
+            System.out.println(i);
+            char c= s.charAt(i);
+            
+            if (isAlpha( c)){
+                if (cnt %2 ==0){
+                // 짝수면 대문자
+                    c=Character.toUpperCase(c);
+                }else{
+                // 홀수면 소문자
+                    c=Character.toLowerCase(c);
+                }
+                cnt+=1;
+            }else{
+                cnt=0;
+            }
+        // System.out.println(c+" "+cnt);
+            
+            arr[i]=c;
+        }
+        for (int i=0; i<arr.length;i++){
+            answer+= Character.toString(arr[i]);
+        }
+        return answer;
+    }
+}
