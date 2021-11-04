@@ -1,0 +1,101 @@
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+class Solution {
+    public String solution(String new_id) {
+        String tmp;
+        new_id = new_id.toLowerCase();
+        System.out.println(new_id);
+        
+        
+        String step2= new_id.replaceAll("[^a-z0-9-_.]","");
+        System.out.println(step2);
+        
+        // 3단계
+        
+        String step3= step2.replaceAll("[.]{2,}",".");
+        System.out.println("3단계 = "+step3);
+        
+        // System.out.println(step3.charAt(0));
+        
+        int stlen= step3.length();
+        System.out.println(stlen);
+        String step4="";
+        if(stlen==0){
+            step4="";
+        }
+        else if (stlen==1){
+            if (step3.charAt(0)==('.')){
+                step4="";
+                System.out.println("없어짐"+step4);
+            }
+        }else if(stlen ==2){
+            if (step3.charAt(0)==('.') &&step3.charAt(1)==('.')){
+                
+                step4="";
+                System.out.println("here"+ step4);
+                
+            }else if (step3.charAt(0)==('.')){
+                
+                step4=step3.substring(1,2);
+                System.out.println("step4"+step4);
+                
+            }else if (step3.charAt(1)==('.')){
+                
+                step4=step3.substring(0,1);
+                System.out.println("step4"+step4);
+                
+            }else{
+                step4=step3;
+            }
+        }else{
+            System.out.println(step3.length());
+            if (step3.charAt(0)==('.') &&step3.charAt(step3.length()-1)==('.')){
+                
+                step4=step3.substring(1,step3.length()-1);
+                System.out.println("2글자이상 양옆에 "+ step4);
+                
+            }else if (step3.charAt(0)==('.')){
+                
+                step4=step3.substring(1,step3.length());
+                System.out.println("step4 "+step4);
+                
+            }else if (step3.charAt(step3.length()-1)==('.')){
+                
+                step4=step3.substring(0,step3.length()-1);
+                System.out.println("step4 "+step4);
+                
+            }else{
+                step4=step3;
+            }
+        }
+        // 5단계
+        System.out.println("--------5단계------ "+step4);
+        if (step4.length()==0){
+            step4="a";
+        }
+        
+        System.out.println("--------6단계------ "+step4);
+        if (step4.length()>=16){
+            step4= step4.substring(0,15);
+            if (step4.charAt(14)==('.')){
+                step4=step4.substring(0,14);
+            }
+        System.out.println(step4);
+        }
+        
+         if (step4.length()<=2){
+             int seq=3-step4.length();
+             System.out.println("seq= "+seq);
+             String al= Character.toString(step4.charAt(step4.length()-1));
+             for(int i=0; i<seq; i++){
+                 step4+=al;
+             }
+            System.out.println(step4);
+         }
+
+        
+        String answer = step4;
+        return answer;
+    }
+}
