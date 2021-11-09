@@ -1,0 +1,24 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        boolean check;
+        for(int i=2; i<n+1;i++){
+            check= true;
+            for(int j=2; j <Math.sqrt(i)+1; j++){
+                if (i%j==0){
+                    check=false;
+                    break;
+                }
+            }
+            if (check==true){
+                 // System.out.println("***i ="+i);  
+                answer+=1;
+            }
+                    
+            
+        }
+       
+        
+        return answer+1;
+    }
+}
