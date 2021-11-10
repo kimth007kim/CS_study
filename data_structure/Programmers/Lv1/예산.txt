@@ -1,0 +1,30 @@
+import java.util.Arrays;
+
+class Solution {
+    public static void Show(int [] arr){
+       System.out.println(Arrays.toString(arr));
+    
+    }
+    
+    
+    public int solution(int[] d, int budget) {
+        
+        // Show(d);
+        Arrays.sort(d);
+        // Show(d);
+        int cnt = 0;
+        int total= 0;
+        
+        for( int i =0; i <d.length; i++){
+            if(total+d[i]>budget){
+                break;
+            }else{
+                total+=d[i];
+                cnt+=1;
+            }
+        
+        }
+        
+        return cnt;
+    }
+}
