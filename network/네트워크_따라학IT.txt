@@ -642,7 +642,7 @@ http 1.0 의 특징
 네트워크 부하가 심하다
 
 
-http 1.0 의 특징
+http 1.1 의 특징
 1.tcp 3way handshake를 한다.
 2.http요청을 하고
 3.http응답
