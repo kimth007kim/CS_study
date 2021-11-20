@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.lang.String;
+
+class Solution {
+    public String solution(String s) {
+        StringBuilder tmp = new StringBuilder();
+        String first ="";
+        String next= "";
+        char ch;
+        s=s.toLowerCase();
+        
+        for (int i=0;i<s.length();i++){
+            ch=s.charAt(i);
+            
+            if (i==0 || (i!=0 && Character.isWhitespace(s.charAt(i-1)))){
+                ch=Character.toUpperCase(ch);
+            }
+            tmp.append(ch);
+                
+            // System.out.println(i+" " +ch);
+        }
+        
+       
+        
+        String answer = tmp.toString();
+        return answer;
+    }
+}
