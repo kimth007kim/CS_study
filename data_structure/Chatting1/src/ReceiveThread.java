@@ -16,7 +16,7 @@ public class ReceiveThread extends Thread {
 			while (true) {
 				receiveString = tmpbuf.readLine();
 				if (receiveString == null) {
-					System.out.println("상대방 연결이 되었습니다.");
+					System.out.println("상대방 연결이 끊겼습니다.");
 					break;
 				} else {
 					System.out.println("상대방: " + receiveString);

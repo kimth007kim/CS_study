@@ -16,9 +16,10 @@ public class SendThread extends Thread {
 			String sendString;
 
 			while (true) {
+//				System.out.print("º¸³»±â>>");
 				sendString = tmpbuf.readLine();
 
-				sendWriter.println(sendString);
+				sendWriter.write(sendString+"\n");
 				sendWriter.flush();
 			}
 
