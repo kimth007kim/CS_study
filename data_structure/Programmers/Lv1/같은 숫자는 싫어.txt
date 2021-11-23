@@ -1,0 +1,25 @@
+import java.util.*;
+import java.util.ArrayList;
+
+public class Solution {
+    public int[] solution(int []arr) {
+        int point=-1;
+        
+        ArrayList<Integer> tmp = new ArrayList();
+
+        for(int i =0; i<arr.length;i++){
+            if(point != arr[i]){
+                 tmp.add(arr[i]);
+                point = arr[i];
+            }
+        }
+        int [] answer= new int[tmp.size()];
+
+        for (int i =0; i< tmp.size();i++){
+            answer[i]= tmp.get(i);
+        }
+        
+
+        return answer;
+    }
+}
