@@ -1,0 +1,32 @@
+import java.util.Arrays;
+import java.lang.StringBuffer;
+
+class Solution {
+    public String solution(String s) {
+        StringBuffer sb = new StringBuffer();
+        int MIN=0;
+        int MAX=0;
+        int tmp;
+        String [] arr = s.split(" ");
+        for(int i=0; i<arr.length; i++){
+            tmp= Integer.parseInt(arr[i]);
+            if (i==0){
+                MIN=tmp;
+                MAX=tmp;
+            }else{
+                if (MIN>tmp){
+                    MIN=tmp;
+                }
+                if(MAX<tmp){
+                    MAX =tmp;
+                }
+            }
+            System.out.println(arr[i]);
+        }
+        sb.append(Integer.toString(MIN));
+        sb.append(" ");
+        sb.append(Integer.toString(MAX));
+        
+        return sb.toString();
+    }
+}
