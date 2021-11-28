@@ -1,0 +1,15 @@
+class Solution {
+    public long[] solution(long x, int n) {
+        long[] answer = new long[n];
+        long tot=Long.valueOf(x);
+        answer[0]=tot;
+        
+        if (n>1){
+        for (int i=1;i<n;i++){
+            tot+=x;
+            answer[i]=tot;
+        }
+        }
+        return answer;
+    }
+}
