@@ -95,12 +95,12 @@ public class ChatClient {
 
 	public static void main(String[] args) {
 		Socket socket= null;
-		ClientFrame cf;
 		
 		try {
 			socket=new Socket("127.0.0.1",8888);
 			System.out.println("연결 성공");
-			cf = new ClientFrame(socket);
+			System.out.println(socket.getLocalPort());
+			ClientFrame cf = new ClientFrame(socket);
 			new ReadThread(socket, cf).start();
 			
 			

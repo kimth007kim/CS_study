@@ -55,9 +55,9 @@ public class serverGui extends JFrame{
         getContentPane().add(scrollPane);
         scrollPane.setViewportView(textArea);
 	}
-	public static void main(String[] args) {
-		new serverGui();
-
-	}
+//	public static void main(String[] args) {
+//		new serverGui();
+//
+//	}
 
 }
