@@ -1,6 +1,6 @@
 package hiding;
 
-class BirthDay{
+class BirthDay {
 	private int day;
 	private int month;
 	private int year;
