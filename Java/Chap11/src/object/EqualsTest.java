@@ -21,6 +21,11 @@ class Student {
 		}
 		return false;
 	}
+	
+	public int hashCode() {
+		return studentID;
+	}
+	
 
 }
 
@@ -39,6 +44,23 @@ public class EqualsTest {
 
 		System.out.println(std1 == std2);
 		System.out.println(std1.equals(std2));
+	
+
+		System.out.println(std1.hashCode());
+		System.out.println(std2.hashCode());
+//		
+//		System.out.println(System.identityHashCode(str1));
+//		System.out.println(System.identityHashCode(str2));
+		
+		
+		
+//		System.out.println(str1.hashCode());
+//		System.out.println(str2.hashCode());
+		
+		System.out.println(std1);
+		System.out.println(std2);
+//		System.out.println(System.identityHashCode(str1));
+//		System.out.println(System.identityHashCode(str2));
 	}
 
 }
