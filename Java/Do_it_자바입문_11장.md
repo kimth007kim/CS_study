@@ -71,3 +71,13 @@ String,Integer,System 등등
   StringBuffer는 멀티 쓰레드 프로그래밍에서 동기화 보장
   단일 쓰레드에서는 StringBuilder를 사용하기를 권장
   toString() 메서드로 String 변환
+  
+ - wrapper 클래스
+ 
+ - Class클래스
+   클래스의 정보를 알아올수 있다.
+ 
+
+ 
+
+
