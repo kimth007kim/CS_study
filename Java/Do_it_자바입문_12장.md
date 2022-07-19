@@ -41,3 +41,46 @@
    Collections.synchronizedList(new ArrayList<String()); 이렇게 사용한다.
    
    
+- Set 인터페이스
+
+    Collections 하위의 인터페이스
+    중복을 허용하지 않음
+    아이디,주민번호,사번등 유일한 값이 객체를 관리할때 사용
+    List는 순서 기반의 인터페이스, Set은 순서 없음
+    get(i) 메서드 제공x
+    
+    
+- TreeSet 클래스
+    
+    Tree 가 붙으면 정렬을 하기위한 것
+    중복을 허용하지 않으면서 오름차순이나 내림차순으로 객체 정렬
+    내부적으로 이진 검색트리로 구현
+    이진 검색트리에 자료가 저장할때 비교하여 저장할 위치를 정함
+    객체 비교를 위해 Comparable이나 Comparator를 구현해야한다.
+    
+    
+- Comparable 인터페이스와 Comparaator 인터페이스
+
+    정렬 대상이 되는 클래스가 구현해야 하는 인터페이스
+    Comparable 은 CompareTo() 메서드를 구현
+        매개변수와 자기자신(this ) 비교
+        
+    Comparator는 compare() 메서드를 구현
+        두개의 매개변수를 구현 (자신은 첫번째 매개변수)
+        
+    TreeSet 생성자에 Comparator가 구현된 객체를 매개변수로 전달
+    
+    TreeSet<Member> treeSet = new TreeSet<Member>(new Member());
+    
+    일반적으로 Comparable을 더많이 씀
+    
+- Map 인터페이스
+    
+    key-value pair의 객체를 관리하는데 필요한 메서드 정의
+    key는 중복될수 없음
+    검색을 위한 자료구조
+    key를 이용하여 값을 저장하거나 검색,삭제 할때 사용하면 편리함
+    내부적으로 hash방식으로 구현됨
+    key가되는 객체의 유일성함의 여부를 알기 위해 equals()와 hashCode()메서드를 재정의함
+    
+    
