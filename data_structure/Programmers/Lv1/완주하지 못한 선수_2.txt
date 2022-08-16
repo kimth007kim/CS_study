@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        HashMap<String,Integer> nameTag = new HashMap<>();
+        
+        for (String name: participant){
+            if (nameTag.containsKey(name)){
+                // int now = nameTag[name]+1;
+                // System.out.println(now);
+                nameTag.put(name,nameTag.get(name)+1);
+            }else{
+                nameTag.put(name,1);
+            }
+        }
+        for (String name: completion){
+            if (nameTag.containsKey(name)){
+                nameTag.put(name,nameTag.get(name)-1);
+            }
+        }
+        for (String name: nameTag.keySet()){
+            if (nameTag.get(name)>=1){
+                return name;
+            }
+        }
+        return null;
+    }
+}
