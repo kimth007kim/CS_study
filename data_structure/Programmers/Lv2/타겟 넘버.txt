@@ -1,0 +1,44 @@
+class Solution {
+    public static int cnt=0;
+    public static int[] numbers;
+    public static int length;
+    public static int target;
+
+    public void dfs(int now , int total){
+        if (now>=length){
+            if (total==target){
+                cnt++;
+            }
+            return;
+        }
+        for (int j=0; j<2;j++){
+            if (j==0){
+                 dfs(now+1 ,total+numbers[now]);
+            }else{
+                dfs(now+ 1,total-numbers[now]);
+            }
+
+        }
+    }
+    
+    
+    public int solution(int[] numbers, int target) {
+        int answer = 0;
+        this.length = numbers.length;
+        this.numbers= numbers;
+        this.target= target;
+
+        for (int i=0; i<2;i++){
+            int total =0;
+            if (i==0){
+                total+=numbers[0];
+                dfs(1 ,total);
+            }else{
+                total-=numbers[0];
+                dfs(1 ,total );
+            }
+
+        }
+        return cnt;
+    }
+}
