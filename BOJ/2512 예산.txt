@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class Main {
+    public static int target;
+    public static int maxVal=0;
+    public static int [] arr;
+    public static int result=0;
+    public static int n;
+    public static void bisect(int start, int end){
+        while( start<=end){
+            int total = 0;
+            int mid = (start+end)/2;
+            for(int i=0; i<n;i++){
+                if (arr[i]>=mid){
+                    total+=mid;
+                }else{
+                    total+=arr[i];
+                }
+            }
+            
+            if (total<=target){
+                start=mid+1;
+                if (result<mid);
+                    result =mid;
+            }else{
+                end=mid-1;
+            }
+        }
+    }
+    
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        arr = new int[n];
+        
+        
+        for(int i=0; i<n;i++){
+            arr[i]= sc.nextInt();
+            if (maxVal<arr[i]){
+                maxVal=arr[i];
+            }
+        }
+        target =  sc.nextInt();
+        bisect(0,maxVal);
+        
+        System.out.println(result);
+    }
+}
