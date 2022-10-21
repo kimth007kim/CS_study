@@ -1,0 +1,156 @@
+https://github.com/WeareSoft/tech-interview/blob/master/contents/java.md
+
+java 프로그래밍이란
+
+Java SE와 Java EE 애플리케이션 차이
+	표준에디션
+	엔터프라이즈 에디션, 웹프로그래밍에 필요한 JDBC,JTA,JSP등의 기능을 제공
+java와 c/c++의 차이점
+
+객체란 무엇인가?
+	현실세계의 실체및 개념을 반형하는 상태와 행위를 정의한 데이터의 집합
+
+java 언어의 장단점
+	-자동으로 메모리를 관리해준다.
+	-운영체제에 독립적이다.
+	-객체 지향 언어이다.
+
+	-비교적 속도가 느리다.
+
+java의 접근 제어자의 종류와 특징
+			같은 클래스 	같은패키지	자손클래스	전체
+	public		o		o		o		o
+	protected 	o		o		o	
+	default		o		o	
+	private		o		
+	
+
+자바에서 제공하는 Wrapper class
+	원시형 타입인
+
+박싱(Boxing), 언박싱(Unboxing)
+	박싱 => 원시형을 wrapper 타입으로 바꾸는것
+	언박싱 => wrapper 타입을 원시형으로 바꾸는것
+
+오토 박싱(AutoBoxing)과 오토 언박싱(AutoUnBoxing)
+
+
+OOP의 4가지 특징
+
+	추상화 : 객체의 공통된 동작이나,속성을 묶어서 표현하는 방식
+	캡슐화: 데이터를 은닉하고 그 데이터를 접근하지 못하게하는것
+	다형성: 하나의 메서드나 클래스가 다양한 방식으로 동작하는것, 오버로딩, 오버라이딩이있다.
+	상속 : 상위 클래스의 특성을 하위클래스가 이어받아서 재사용하거나 확장하는것
+	
+
+OOP의 5대 원칙
+	SOLID
+	S 단일 책임의 원칙:  하나의 클래스는 하나의 책임만 가진다. 
+		Class Car 대신에 Class Wheel ,Class seat 등등으로 나눠라
+	O 개방 폐쇄의 원칙: 확장에는 열려있고 변경에는 닫혀있어야한다.
+	L 리스코프 치환 원칙: 상위 타입의 객체를 하위타입의  객체로 바꾸어도 문제없이 돌아가야된다.
+	I 인터페이스 분리 법칙 : 사용하지않는 인터페이스 메소드때문에 영향을 받아 구현하면 안된다. 영향을 받으면 인터페이스를 나눠야한다.
+	D 의존관계 역전 원칙: 자주 변화하는것 보다는 변화하기 어려운것에 의존하는것이 좋다
+
+객체지향 프로그래밍과 절차지향 프로그래밍의 차이
+	
+
+
+객체지향이란
+
+객체지향의 특징
+
+static?
+	
+
+java의 non-static 멤버와 static 멤버의 차이
+
+
+java의 main 메서드가 static인 이유
+
+
+java의 final 키워드
+	fial: 변수나 메서드 또는 클래스가 변경 불가능 하게 만드는것
+
+java의 제네릭과 c++의 템플릿의 차이
+
+
+
+java의 가비지 컬렉션 처리 방법
+	
+
+java9의 default GC
+	
+java 직렬화와 역직렬화란 무엇인가
+	
+클래스 객체 인스턴스의 차이
+	
+객체란 무엇인가
+	
+오버로딩과 오버라이딩의 차이
+	
+Call by Reference와 Call by Value의 차이
+	
+인터페이스와 추상 클래스의 차이
+	
+JVM 구조
+	
+
+Java Collections Framework
+
+java Map 인터페이스 구현체의 종류
+
+java Set 인터페이스 구현체의 종류
+
+java List 인터페이스 구현체의 종류
+
+Annotation
+
+String StringBuilder StringBuffer
+
+동기화와 비동기화의 차이
+
+java에서 ==와 equals()의 차이
+
+java의 리플렉션 이란
+
+Stream이란
+
+Lambda란
+
+Reference
+
+
+https://github.com/JaeYeopHan/Interview_Question_for_Beginner/tree/master/Java
+
+JVM 에 대해서, GC 의 원리
+Collection
+
+Annotation
+
+Reference
+
+Generic
+
+final keyword
+
+Overriding vs Overloading
+
+Access Modifier
+
+Wrapper class
+
+AutoBoxing
+
+Multi-Thread 환경에서의 개발
+
+Field member
+
+동기화(Synchronized)
+
+ThreadLocal
+
+Personal Recommendation
+
+
+
