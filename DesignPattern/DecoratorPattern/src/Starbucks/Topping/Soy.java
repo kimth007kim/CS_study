@@ -1,7 +1,6 @@
 package Starbucks.Topping;
 
 import Starbucks.Coffee.Beverage;
-import Starbucks.Coffee.CondimentDecorator;
 
 public class Soy extends CondimentDecorator {
     Beverage beverage;
